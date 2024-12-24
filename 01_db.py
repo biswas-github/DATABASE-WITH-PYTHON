@@ -21,3 +21,7 @@ mycursor.execute("SHOW TABLES")
 print(" tables are \n")
 for x in mycursor:
     print(x)
+# updating the student name to 'bib' where id is 1
+mycursor.execute("UPDATE student SET name = 'bib' WHERE id = 1")
+mydb.commit()
+print(mycursor.rowcount, "record(s) affected")
